@@ -1,238 +1,116 @@
-/* Global Styles */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-image: url(img/bg.png);
+  background-size: 100vw 100vh;
+  background-repeat: no-repeat;
+}
+.container {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100vw;
+  height: 100vh;
+}
+.top {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 80px 0 40px;
+}
+.logo img {
+  width: 140px;
+  cursor: pointer;
+}
+.items ul {
+  display: flex;
+  list-style: none;
+}
+.items ul li {
+  color: #fff;
+  margin: 0 15px;
+  font-family: sans-serif;
+  font-size: 20px;
+  cursor: pointer;
+}
+.items ul li:hover {
+  color: pink;
+  font-weight: 600;
+}
+.log button {
+  padding: 10px 22px;
+  color: #fff;
+  font-size: 18px;
+  background: transparent;
+  font-family: sans-serif;
+  outline: none;
+  border: 2px solid pink;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.log button:hover {
+  background-color: pink;
+  color: #000;
+  font-weight: 600;
+  transition: 0.5s ease-in-out;
+}
+.centre {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 50px 0 0;
+}
+.title {
+  display: flex;
+  flex-direction: column;
+}
+.title a {
+  color: #fff;
+  font-size: 20px;
+  font-family: sans-serif;
+  margin-left: 24vw;
+}
+.icons {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.icon img {
+  width: 50px;
+  margin-top: 20px;
+  cursor: pointer;
 }
 
-/* Fullscreen Background */
-.fullscreen {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: -1;
+/* Remove previous bottom content */
+.down {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.6);
+  height: 15vh;
 }
 
-/* Squid Game Box */
-.squid-game-box {
-    position: absolute;
-    top: 45%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 800px;
-    height: 350px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background: rgba(0, 0, 0, 0.85);
-    border-radius: 15px;
-    border: 3px solid white;
-    box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.7);
-    font-family: 'Montserrat', sans-serif;
-    text-align: center;
-    padding: 15px;
-    color: white;
-    margin-bottom: 20px;  /* Added gap below the Squid Game Box */
+/* New button style */
+.cta .play-btn {
+  padding: 15px 40px;
+  font-size: 28px;
+  font-weight: bold;
+  font-family: 'Orbitron', sans-serif; /* Futuristic font */
+  color: #ffffff; /* Default color */
+  text-transform: uppercase;
+  background: linear-gradient(to right, #c4c4c4 0%, #ff3ea5 60%);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  text-shadow: 0px 0px 10px rgba(255, 62, 165, 0.8);
+  transition: all 0.3s ease-in-out;
 }
 
-
-/* Mobile Adjustments for Squid Game Box */
-@media (max-width: 768px) {
-    .squid-game-box {
-        width: 90%;
-        height: 300px;
-    }
-
-    #game-status {
-        font-size: 18px;
-    }
-
-    button {
-        font-size: 16px;
-    }
+/* Hover effect */
+.cta .play-btn:hover {
+  background: linear-gradient(to right, #ffffff 0%, #ff1a75 60%);
+  box-shadow: 0px 0px 15px rgba(255, 62, 165, 1);
+  transform: scale(1.05);
 }
 
-
-.squid-game-box h2,
-.squid-game-box p,
-.squid-game-box button {
-    display: block;
-    text-align: center;
-    margin-bottom: 5px; /* Adds spacing between elements */
-}
-
-.squid-game-box button {
-    margin-top: 10px; /* Adjust button position */
-}
-
-/* Game Status */
-#game-status {
-    font-size: 22px;
-    font-weight: bold;
-    margin-bottom: 10px;
-}
-
-/* Button */
-button {
-    font-size: 18px;
-    font-weight: 700;
-    padding: 10px 20px;
-    background-color: white;
-    color: black;
-    border: 2px solid white;
-    border-radius: 50px;
-    cursor: pointer;
-    transition: all 0.3s ease-in-out;
-}
-
-button:hover {
-    background-color: black;
-    color: white;
-    transform: scale(1.1);
-}
-
-/* Game Area */
-.game-area {
-    position: relative;
-    width: 95%;
-    height: 350px; /* Reduced height */
-    border-radius: 10px;
-    margin-top: 25px;
-    overflow: hidden;
-    background: linear-gradient(to top, #707070, #686868d0);
-    box-shadow: 0px 0px 20px rgba(85, 0, 17, 0.7);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-
-
-/* Mobile Adjustments for Game Area */
-@media (max-width: 768px) {
-    .squid-game-box {
-        width: 90%;
-        height: 300px;
-    }
-
-    .game-area {
-        width: 100%;
-        height: 250px;
-    }
-}
-
-/* Character */
-#character {
-    position: absolute;
-    bottom: 10px;
-    left: 10px;
-    width: 70px; /* Reduced size */
-    height: 70px;
-    transition: left 0.2s ease-in-out;
-}
-
-/* Mobile Adjustments for Character */
-@media (max-width: 768px) {
-    #character {
-        width: 60px;
-        height: 60px;
-    }
-}
-
-/* Goal Characters (Guards at the End) */
-.goal-character {
-    position: absolute;
-    bottom: 10px;
-    width: 55px; /* Adjusted */
-    height: auto;
-}
-
-/* Position First Guard */
-#guard1 {
-    right: 90px; /* Adjusted position */
-}
-
-/* Position Second Guard */
-#guard2 {
-    right: 40px; /* Adjusted position */
-}
-
-/* Road */
-.road {
-    position: absolute;
-    bottom: 0px;
-    left: 0;
-    width: 100%;
-    height: 6px; /* Reduced thickness */
-    background: #333;
-    border-top: 3px solid #222;
-    border-bottom: 3px solid #222;
-    background-image: repeating-linear-gradient(to right, transparent, transparent 40px, white 10px, transparent 40px);
-    background-size: 60px 100%;
-}
-
-/* Mobile Responsiveness */
-@media (max-width: 768px) {
-    .game-area {
-        width: 100%;
-        height: 280px; /* Adjusted for mobile */
-    }
-
-    #character {
-        width: 60px;
-        height: 60px;
-    }
-
-    .goal-character {
-        width: 45px;
-    }
-}
-
-/* Guard Image */
-.guard-image {
-    position: relative;
-    width: 60px;
-    height: auto;
-}
-
-/* Signal Lights */
-.signal {
-    position: absolute;
-    top: -60px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 35px;
-    height: 35px;
-    border-radius: 50%;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.8);
-    opacity: 0;
-    transition: opacity 0.3s ease-in-out;
-}
-
-/* Red Light Signal */
-#signal1-red, #signal2-red {
-    background-color: red;
-    box-shadow: 0 0 25px red, 0 0 50px darkred;
-    opacity: 1;
-    animation: pulseRed 1.5s infinite;
-}
-
-/* Green Light Signal */
-#signal1-green, #signal2-green {
-    background-color: limegreen;
-    box-shadow: 0 0 25px limegreen, 0 0 50px darkgreen;
-    opacity: 0;
-    animation: pulseGreen 1.5s infinite;
-}
-
-/* Mobile Adjustments for Signal Lights */
-@media (max-width: 768px) {
-    .signal {
-        width: 30px;
-        height: 30px;
-    }
-}

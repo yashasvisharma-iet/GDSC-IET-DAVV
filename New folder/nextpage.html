@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Red Light Green Light Game</title>
+    <link rel="stylesheet" href="stylee.css">
+</head>
+<body>
+
+    <img src="46433-3840x2160-desktop-4k-squid-game-background-image.jpg" alt="Background" class="fullscreen">
+
+    <div class="squid-game-box">
+        <h2>Red Light, Green Light</h2>
+        <p id="game-status">Press Start to Begin</p>
+        <button onclick="startGame()">Start Game</button>
+
+        <!-- Game Area with existing content -->
+        <div class="game-area">
+            <!-- Road -->
+            <div class="road"></div>
+
+            <!-- Character (Runner) -->
+            <img src="assets/character.png" id="character">
+
+            <!-- Guard 1 with Signal Lights -->
+            <div class="goal-character" id="guard1">
+                <img src="assets/guard1frontward.png" id="guard1-image" class="guard-image"> <!-- Initial frontward image -->
+                <div class="signal" id="signal1-red"></div>
+                
+                <div class="signal" id="signal1-green"></div>
+            </div>
+
+            <!-- Guard 2 with Signal Lights -->
+            <div class="goal-character" id="guard2">
+                <img src="assets/guard2.png" class="guard-image">
+                <div class="signal" id="signal2-red"></div>
+                <div class="signal" id="signal2-green"></div>
+            </div>
+        </div>
+
+
+<!-- Red Light and Green Light Sound -->
+<audio id="redLightSound" src="redlight-sound.mp3" preload="auto"></audio>
+<audio id="greenLightSound" src="greenlight-sound.mp3" preload="auto"></audio>
+<audio id="winSound" src="assets/win.mp3"></audio>
+
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

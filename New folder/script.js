@@ -65,7 +65,7 @@ function toggleSignalLights() {
         document.getElementById("signal2-green").style.opacity = 0;
 
         // Change the guard's image to frontward (red light)
-        guard1Image.src = "/assets/guard1frontward.png";
+        guard1Image.src = "assets/guard1frontward.png";
     } else {
         // Show green signal and hide red signal
         document.getElementById("signal1-red").style.opacity = 0;
@@ -74,7 +74,7 @@ function toggleSignalLights() {
         document.getElementById("signal2-green").style.opacity = 1;
 
         // Change the guard's image to backward (green light)
-        guard1Image.src = "/assets/guard1backward.png";
+        guard1Image.src = "assets/guard1backward.png";
     }
 }
 
