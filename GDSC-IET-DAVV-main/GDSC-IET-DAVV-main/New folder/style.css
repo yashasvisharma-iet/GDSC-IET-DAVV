@@ -39,7 +39,17 @@ body {
   list-style: none;
   flex-wrap: wrap;
 }
+.items ul li a {
+  color: #fff;  /* Ensures text remains white */
+  text-decoration: none; /* Removes default underline */
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
 
+.items ul li a:hover {
+  color: pink;
+  font-weight: 600;
+}
 .items ul li {
   color: #fff;
   margin: 10px;
@@ -60,6 +70,15 @@ body {
   border: 2px solid pink;
   border-radius: 6px;
   cursor: pointer;
+}
+.log img.login-icon {
+  width: 50px;  /* Adjust size as needed */
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+.log img.login-icon:hover {
+  transform: scale(1.1);
 }
 
 .log button:hover {
