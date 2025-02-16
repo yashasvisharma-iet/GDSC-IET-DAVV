@@ -8,7 +8,7 @@ let touchMoveInterval = null;  // To handle continuous movement on touch
 let character = document.getElementById("character");
 
 let isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-let playerSpeed = isMobile ? 3 : 20; // Lower speed for mobile
+let playerSpeed = isMobile ? 3 : 35; // Lower speed for mobile
 let isAlertShown = false;
 
 let redLightSound = document.getElementById("redLightSound");
